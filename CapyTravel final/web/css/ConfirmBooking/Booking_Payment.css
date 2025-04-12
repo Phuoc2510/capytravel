@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.left-section, .right-section {
+    padding: 40px;
+}
+
+.left-section {
+    width: 65%;
+    border-right: 1px solid #e0e0e0;
+}
+
+.right-section {
+    width: 35%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Payment Method Styles */
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-option:hover {
+    background-color: #e0f7fa;
+    border-color: #007bff;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.3);
+    accent-color: #007bff;
+}
+
+.payment-option img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Total Price */
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e85d04;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+/* Pay Button */
+.pay-button {
+    width: 100%;
+    background-color: #ff6b35;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #ff5a21;
+}
+
+/* Flight Summary Styles */
+.flight-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.flight-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9fbff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-table h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.flight-table p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0;
+}
+

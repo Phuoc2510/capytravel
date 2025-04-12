@@ -1,0 +1,735 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/*them cai nay tu day*/
+.header.active {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ hơn */
+    a {       
+        color: black; /* Kế thừa màu chữ từ phần tử cha */
+    }
+}
+
+.header.active p {   
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: black;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+/*them toi day*/
+
+.header__logo {
+    margin-top: -20px;
+    margin-left: -100px;
+}
+
+.header__logo p {
+    color: white;
+    font-size: 30px;
+     text-decoration: none; /* Loại bỏ gạch chân */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header__menu {
+    display: inline-flex;
+}
+
+/*chinh lai cai header menu 1*/
+.header__menu-1 {
+    margin-right: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        list-style: none; /* Loại bỏ dấu đầu dòng */
+        padding: 0; /* Xóa padding mặc định */
+        margin: 0; /* Xóa margin mặc định */
+        display: flex !important ; /* Đặt các thẻ li nằm ngang */
+    }
+    li {
+        margin: 0 15px; /* Khoảng cách giữa các thẻ li */
+    }
+    a {
+        text-decoration: none; /* Loại bỏ gạch chân */
+        color: white; /* Kế thừa màu chữ từ phần tử cha */
+    }
+    li:hover{
+        background-color: #ddd;
+    }
+    a:hover {        
+        color: black; /* Màu chữ khi hover */
+    }
+}
+
+.header__menu-4 {
+    width: 20px;
+    height: 20px;
+    margin: 7px 50px 0 50px;
+    .dropdown-menu{
+        background-color: #f8f9fa;
+        border: 1px solid #ccc; /* Đường viền cho danh sách */
+        border-radius: 10px;
+         position: absolute;
+    display: none; /* Ẩn menu dropdown mặc định */
+    }
+}
+
+.header__menu-4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.header__menu-4 .header__last-logo img:hover + input {
+    display: inline-block;
+    background-color: #4B5D67;
+    background-color: rgb(75, 93, 103);
+    color: #e0e0e0;
+}
+
+.header__menu-4 .header__last-logo input {
+    display: none;
+}
+
+
+
+.select-box {
+    position: relative;
+    display: block;
+    align-items: center;
+    width: 137px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #60666d;
+}
+
+.select-box__image {
+    position: absolute;
+    top: 20%;
+    right: 87%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.select-box__current {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+    outline: none;
+    padding: 8px;
+    background-color: transparent;
+}
+
+.select-box__current:hover {
+    background-color: #4B5D67;
+    background-color: rgb(75, 93, 103);
+    color: #e0e0e0;
+}
+
+.select-box__current:focus+.select-box__list {
+    opacity: 1;
+    animation-name: none;
+}
+
+.select-box__current:focus .select-box__icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select-box__icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+}
+
+.select-box__icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+}
+
+.select-box__icon--1 {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    width: 15px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+}
+
+.select-box__value {
+    display: flex;
+
+}
+
+.select-box__input {
+    display: none;
+
+}
+
+.select-box__input:checked+.select-box__input-text {
+    display: block;
+}
+
+.select-box__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+    background-color: transparent;
+    color: white;
+    white-space: nowrap;
+}
+
+.select-box__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc; /* Đường viền cho danh sách */
+    border-radius: 10px;
+}
+
+.select-box__option {
+    display: block;
+    padding: 8px;
+    background-color: #eef2f3;
+    color: black;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.select-box__option:hover,
+.select-box__option:focus {
+    width: 100%;
+    color: #546c84;
+    background-color: #fbfbfb;
+}
+
+@keyframes HideList {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
+}
+
+
+.section-1 {
+    margin-top: -100px;
+    padding-top: 140px;
+    margin-bottom: -380px;
+    background-image: url(../imgs/home-img/headerIMG.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 740px;
+}
+
+.section-1__title {
+    padding-right: 20px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.section-1__buttons {
+    margin-top: 40px;
+    margin-left: 130px;
+    display: flex;
+}
+
+.section-1__flights {
+    margin-right: 30px;
+    display: flex;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.section-1__buttons i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.section-1__flights i {
+    color: #0099CC;
+}
+
+.button-title-1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.button-title-2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.section1__travel-input {
+    position: relative;
+}
+
+.section1__travel-input i {
+    color: #0099CC;
+    font-size: 20px;
+    position: absolute;
+    top: 56px;
+    left: 18px;
+}
+
+.section1__travel {
+    margin-left: 130px;
+    margin-top: 70px;
+}
+
+.section1__travel form {
+    position: relative;
+    display: flex;
+}
+
+.select-container {
+    display: flex;
+}
+
+.select-container .select-input {
+    border: 0;
+    width: 290px;
+    padding: 17px 10px 17px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    appearance: none;
+    outline: none;
+}
+
+.select-container .select-1 {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+}
+
+.select-container .select-2 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+.select-label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold; /* Đậm hơn */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Đổ bóng */
+    letter-spacing: 0.5px; /* Khoảng cách giữa các ký tự */
+}
+
+.schedule {
+    margin-left: 10px;
+    display: flex;
+}
+
+.schedule input {
+    border: 0;
+    width: 250px;
+    padding: 17px 10px 17px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    appearance: none;
+    outline: none;
+}
+
+.schedule .input-container {
+    position: relative;
+}
+
+.schedule .input-container i {
+    color: #0099CC;
+    font-size: 20px;
+    position: absolute;
+    top: 56px;
+    left: 18px;
+}
+
+.schedule__input-1 {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+}
+
+.schedule__input-2 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+.schedule__input-2.dark {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.section-1__button {
+    position: absolute;
+    top: 43px;
+    right: 210px;
+    color: white;
+    background-color: #EE0000;
+    border-radius: 30%;
+    height: 50px;
+    width: 50px;
+}
+
+.content-wrapper {
+    margin-top: 300px;
+}
+
+/*profile*/
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none; /* Ẩn menu mặc định */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+/*-----------------------------------*/
+
+
+
+
+
+/* start Body 1 */
+
+.offer {
+    margin-left: 50px;
+
+}
+
+.offer p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.deal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 306px;
+
+}
+
+.deal-box {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: #0000001a 0px 2px 8px 0px;
+    display: flex;
+    width: 660px;
+    height: 260px;
+}
+
+.deal-box.reverse {
+    flex-direction: row-reverse; 
+}
+
+.box1 {
+    overflow: hidden; /* Ngăn không cho hình ảnh tràn ra ngoài */
+    img{
+        object-fit: cover;
+        width: 45% ;
+        height: 260px;
+
+    }
+    .deal-content{      
+        h2{
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        padding: 20px 20px 0 20px;
+        height:100%;
+        .deal-button{
+            /*            margin-top: 35px;*/
+        }
+    }
+}
+
+.box2 {
+    overflow: hidden; /* Ngăn không cho hình ảnh tràn ra ngoài */
+    img{
+        padding-top: 30px;
+        width: 330px;
+
+        object-fit: cover;
+    }
+}
+
+.deal-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+
+}
+
+.deal-content h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.deal-content p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.deal-button {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.deal-button:hover {
+    background-color: #0056b3;
+}
+/* end Body 1 */
+
+/* Body 2 (Popular Destinations) */
+
+/* popular-destination*/
+.popular-destinations {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute cards evenly */
+}
+
+.destination-card {
+    flex: 0 1 calc(25% - 20px); /* Each card takes up 25% of the width minus margins */
+    margin: 10px; /* Margin around each card */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.destination-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover;
+}
+
+.destination-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.destination-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.destination-details p {
+    margin-bottom: 8px;
+}
+
+.view-details {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #218838;
+}
+
+/* Body 3 (Airline Partners) */
+.Partner {
+    text-align: center;
+    padding: 30px;
+    background-color: #eef2f3;
+}
+
+.Partner h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.airline-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.airline-logos img {
+
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+/* start Footer */
+.footer {
+    width: 100%;
+    background-color: #0f2027;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.payment-partners h3,
+.contact h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.partners-row {
+    margin-bottom: 10px;
+}
+
+.partners-row img {
+    width: 100px;  
+    height: 50px;  
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.phone--contact {
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contact p a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact p a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    font-size: 14px;
+}
+/* end Footer */

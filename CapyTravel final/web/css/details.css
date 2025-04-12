@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Thay đổi từ không có thành flex */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex; /* Thay đổi từ không có thành flex */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 50px 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    h1, h2 {
+        color: #007bff;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+
+

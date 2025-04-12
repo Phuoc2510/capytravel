@@ -1,0 +1,212 @@
+
+/* CSS cơ bản để tạo bố cục */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-panel,
+.right-panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    width: 60%;
+}
+
+.right-panel {
+    width: 450px; /* Giảm chiều rộng của khung bên phải */
+    height: 350px
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(3, 18, 26);
+}
+
+.details,
+.trip-details {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.details p,
+.trip-details p {
+    margin: 5px 0;
+}
+
+
+/*-------------------------            hành lý -------------------------------------------*/
+
+.luggage-info {
+    border-bottom: 1px solid rgb(205, 208, 209); /* Viền dưới */
+    padding: 15px; /* Padding cho toàn bộ khung */
+    background-color: white; /* Nền trắng */
+    border-radius: 8px; /* Bo góc */
+    margin-bottom: 20px; /* Khoảng cách giữa các khung */
+    display: flex;
+    flex-direction: column;
+}
+
+.luggage-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Giữa các phần tử */
+}
+
+.luggage-title {
+    color: rgb(3, 18, 26);
+    font-size: 20px;
+    margin: 0; /* Bỏ margin */
+    flex-grow: 1; /* Để tiêu đề chiếm không gian còn lại */
+}
+
+.luggage-details {
+    margin-top: 10px; /* Khoảng cách giữa tiêu đề và thông tin chi tiết */
+    color: rgb(104, 113, 118);
+}
+
+.luggage-info-text {
+    margin: 0; /* Bỏ margin */
+}
+
+.luggage-price {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Khoảng cách giữa văn bản và giá */
+}
+
+.starting-from {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.price {
+    margin-left: 5px; /* Khoảng cách giữa chữ và giá */
+}
+
+/*-------------------------------------------------------------------*/
+
+.edit-link {
+    color: #007bff;
+    cursor: pointer;
+    text-align: right;
+}
+
+.trip-title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.account-detail {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px; /* Thêm khoảng cách */
+    border-radius: 8px; /* Góc bo tròn */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho khung */
+    margin-bottom: 20px; /* Khoảng cách giữa các khung */
+}
+
+.account-icon, .additional-icon {
+    margin-right: 15px; /* Khoảng cách giữa các biểu tượng */
+}
+
+.user-info {
+    flex-grow: 1; /* Để phần thông tin người dùng chiếm không gian còn lại */
+}
+
+.user-name {
+    color: rgb(3, 18, 26);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0; /* Bỏ margin */
+}
+
+.user-email {
+    color: rgb(104, 113, 118);
+    margin-top: 4px;
+}
+
+/* Cải thiện form */
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.continue-button,
+.payment-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.continue-button:hover,
+.payment-button:hover {
+    background-color: #0056b3;
+}
+
+.total-price {
+    margin-top: 20px;
+    text-align: right; /* Căn phải cho tổng giá */
+}
+
+.payment-button {
+    background-color: #28a745; /* Màu xanh cho nút thanh toán */
+}
+
+.payment-button:hover {
+    background-color: #218838; /* Màu xanh đậm khi hover */
+}
+
+
+.contact-info,
+.traveler-info {
+    border-bottom: 1px solid rgb(205, 208, 209); /* Viền dưới */
+    padding: 15px; /* Padding cho toàn bộ khung */
+    background-color: white; /* Nền trắng */
+    border-radius: 8px; /* Bo góc */
+    margin-bottom: 20px; /* Khoảng cách giữa các khung */
+    display: flex;
+    flex-direction: column;
+}

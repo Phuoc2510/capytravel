@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.left-section, .right-section {
+    padding: 40px;
+}
+
+.left-section {
+    width: 65%;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Image Styles */
+.wallet-images {
+    display: flex;                  /* Use flexbox for alignment */
+    justify-content: center;        /* Center the images horizontally */
+    align-items: center;            /* Center the images vertically */
+    margin-top: 20px;              /* Space above the images */
+}
+
+.wallet-image {
+    max-width: 100%;               /* Make images responsive */
+    margin: 0 10px;                /* Add some space between images */
+    border-radius: 10px;           /* Rounded corners */
+    display: none;                 /* Initially hidden */
+}
+
+.right-section {
+    width: 35%;
+}
+
+.payment-summary {
+    background-color: #edfee7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.payment-summary h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+#Vietcombank {
+    color: green;
+}
+
+.important-notes {
+    background-color: #ffef92;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.completed-payment {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.completed-payment p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.completed-payment button {
+    background-color: #ff6b35;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.flight-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.flight-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9fbff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-table h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.flight-table p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.bank-selection {
+    margin-bottom: 20px;
+}
+
+.bank-qr {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9fbff;
+}
+
+.bank-qr label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: 350px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.copy-button {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Image Styles */
+.wallet-image {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    max-width: 100%; /* Make it responsive */
+    border-radius: 10px;
+}

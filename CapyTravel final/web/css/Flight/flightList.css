@@ -1,0 +1,108 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Space between the forms */
+}
+.search-form {
+    display: flex;
+}
+.search-input {
+    padding: 10px 12px;
+    margin-right: 5px; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 450px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+.search-input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+.search-button, .create-button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+.search-button {
+    background-color: #28a745;
+}
+.search-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+.create-button {
+    background-color: #007BFF;
+}
+.create-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden; /* Rounded corners */
+}
+.flight-table th, .flight-table td {          
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.flight-table th {
+    background-color: #007BFF;
+    color: white;
+    position: sticky;
+    top: 0; /* Keep header fixed */
+    z-index: 1; /* Ensure header is above content */
+}
+.flight-table tbody tr {
+    transition: background-color 0.3s;
+}
+.flight-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+.action-form {
+    display: inline;
+}
+.detail-button, .delete-button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+.detail-button {
+    background-color: #28a745;
+}
+.detail-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+.delete-button {
+    background-color: #dc3545;
+    margin-left: 5px;
+}
+.delete-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

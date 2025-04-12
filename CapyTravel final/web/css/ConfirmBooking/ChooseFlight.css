@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container,
+.flight-list {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header,
+.flight-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.header p,
+.price-summary p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.flight-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.flight-option:hover {
+    background-color: #f1f1f1;
+}
+
+.flight-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.flight-details p {
+    margin: 0;
+    color: #444;
+}
+
+.flight-details .airline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flight-details .time,
+.flight-details .location {
+    font-size: 16px;
+}
+
+.flight-details .duration {
+    font-size: 14px;
+    color: #777;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.choose-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.choose-button:hover {
+    background-color: #0056b3;
+}
+
+.notification {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notification:hover {
+    background-color: #0056b3;
+}
+
+/* Inside ChooseFlight.css */
+.fade-in {
+    animation: fadeInAnimation ease 1s;
+    opacity: 1;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

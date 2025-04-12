@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.form-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.form-container button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-container .edit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+.form-container .edit-button:hover {
+    background-color: #218838;
+}
+.form-container .cancel-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+.form-container .cancel-button:hover {
+    background-color: #c82333;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    appearance: none; /* Bỏ style mặc định của trình duyệt */
+    outline: none; /* Bỏ viền mặc định khi nhấn */
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+/* Đổi màu viền khi chọn vào */
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+}
+
+/* Định dạng cho option */
+option {
+    padding: 10px;
+}
